@@ -5,7 +5,7 @@
 [contributors-shield]: https://img.shields.io/badge/contributors-_1-blue?style=for-the-badge
 [contributors-url]: https://github.com/drewkybrown/Address-Book/graphs/contributors
 
-![Home Page](screenshots/home.png)
+![](./address_book/screenshots/home.png)
 
 <br />
 
@@ -25,13 +25,13 @@
 
 ## About the Project
 
-A MERN stack real-time messaging application, integrated with Socket.IO, offers an engaging platform for dynamic and instantaneous communication. This application enables users to create a personalized account, fostering a sense of community and ownership. Once registered, users have the flexibility to either create their own chat rooms or join existing ones, allowing them to dive into diverse conversations and connect with different user groups. The use of Socket.IO ensures seamless, real-time communication, making interactions swift and efficient. This application stands as an ideal solution for users seeking immediate and interactive communication, whether for personal connections, collaborative projects, or community engagements.
+I have developed a fully-featured Django address book application that incorporates complete CRUD (Create, Read, Update, Delete) functionalities, designed to manage contact information effectively. This application stands out due to its utilization of a robust stack of technologies and deployment on Heroku, making it accessible anywhere.
 
 ## Screenshots 
 
-![Home Page](screenshots/home.png)
-![Edit Address Page](screenshots/edit_address.png)
-![Add Address Page](screenshots/add_address.png)
+![](./address_book/screenshots/home.png)
+![](./address_book/screenshots/edit_address.png)
+![](./address_book/screenshots/add_address.png)
 
 
 
@@ -53,19 +53,36 @@ A MERN stack real-time messaging application, integrated with Socket.IO, offers 
 
 ## Key Features
 
-1. Real-Time Messaging: Utilize Socket.IO for instant messaging, allowing users to send and receive messages without any delay.
-2. User Authentication: Implement secure user authentication for signing up and logging into the chat application.
-3. Chat History: Store and display chat history so users can view past conversations.
-4. Responsive Design: Ensure the chat application is fully responsive and works seamlessly across different devices and screen sizes.
+## Full CRUD Functionality
+- Create:** I can add new entries to my address book, capturing essential details like name, email, phone number, address, city, state, and zipcode.
+- Read:** I enable users to browse through all stored contacts in the address book, with options to view detailed information for each contact.
+- Update:** I provide the capability to edit the information of existing contacts, ensuring the address book remains up-to-date.
+- Delete:** I allow users to remove outdated or unnecessary contacts, maintaining the relevance and cleanliness of the database.
+
+##Responsive Web Interface
+- My application features a responsive web design, utilizing Django templates potentially enhanced with Bootstrap for styling. This ensures a seamless user experience across different devices and screen sizes.
+
+## Database Integration with PostgreSQL
+- Leveraging `psycopg2` and `dj-database-url`, my app connects to PostgreSQL for robust and secure data storage. This choice supports the efficient management of the address book's data, offering scalability and reliability.
+
+## Environment and Configuration Management
+- Through the use of `python-decouple` and `python-dotenv`, I manage environment variables and application configurations outside the codebase. This practice enhances the security of my application by safeguarding sensitive information such as database credentials.
+
+## Deployment Ready for Heroku
+- My address book application is deployed on Heroku, made seamless by `django-heroku` and `gunicorn`. `Whitenoise` serves static files efficiently, ensuring optimal performance. The deployment process is streamlined, making the application accessible from anywhere with internet access.
+
+## Asynchronous Support
+- With `asgiref`, my application supports asynchronous operations, which enhances its performance by enabling non-blocking database calls and potentially integrating external API requests efficiently.
+
+These features demonstrate the capabilities and flexibility of my Django address book application, highlighting my focus on creating a user-friendly, secure, and accessible tool for managing contact information.
 
 ## Next Steps and Future Enhancements
 
-1. Private and Group Chat Rooms: Offer the ability to create private one-on-one chat rooms or group chat rooms for multiple users.
-2. Online Presence Indicators: Show when users are online, offline, or busy.
-3. Typing Indicators: Display a notification when a user is typing a message in a chat room.
-4. Customizable User Profiles: Allow users to customize their profiles with pictures, bios, and other personal information.
-5. File Sharing: Allow users to share images, documents, and other files within chat rooms.
-6. Message Notifications: Implement notifications for new messages, especially when the application is not actively being used.
+1. Enhanced Search and Filtering:** Introduce advanced search capabilities with autocomplete suggestions to quickly find specific contacts.
+2. User Authentication and Authorization:** Implement secure signup, login, and access control to protect user data and ensure privacy.
+3. Contact Grouping and Tags:** Enable users to categorize and tag contacts for easier organization and retrieval.
+4. Data Export and Import:** Facilitate the seamless migration of contact data across platforms with support for common file formats like CSV and JSON.
+5. Account Recovery Options:** Provide secure methods for users to recover access to their accounts, enhancing trust and security.
 
 ## Contact
 
