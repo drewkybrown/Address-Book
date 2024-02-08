@@ -1,37 +1,37 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
 
-<div class="container">
-	  <div class="row">
+<div class="container mt-4">
+    <div class="row">
+        {% if all_addresses %}
+            {% for records in all_addresses %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ records.name }}</h5>
+                            <p class="card-text">
+                                <strong>Email:</strong> {{ records.email }}<br/>
+                                <strong>Phone:</strong> {{ records.phone }}<br/>
+                                <strong>Address:</strong> {{ records.address }}<br/>
+                                <strong>City:</strong> {{ records.city }}<br/>
+                                <strong>State:</strong> {{ records.state }}<br/>
+                                <strong>Zipcode:</strong> {{ records.zipcode }}<br/>
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="{% url 'edit' records.id %}" class="btn btn-primary">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12">
+                <p class="text-center">No addresses found. Add some!</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
 
-	{% if all_addresses %}
-		{% for records in all_addresses %}
-			<div class="col-sm">
-				<div class="card" style="width: 18rem;">
-				  <div class="card-body">
-				    <h5 class="card-title">{{ records.name }}</h5>
-				    <p class="card-text">
-				    	{{ records.name }}<br/>
-						{{ records.email }}<br/>
-						{{ records.phone }}<br/>
-						{{ records.address }}<br/>
-						{{ records.city }}<br/>
-						{{ records.state }}<br/>
-						{{ records.zipcode }}<br/>
-				    </p>
-				    <a href="{% url 'edit' records.id %}" class="btn btn-secondary">Edit</a>
-				  </div>
-				</div>
-				<br/>
-			</div>
-
-
-			
-			
-
-		{% endfor %}
-	{% endif %}
-</div></div>
 {% endblock %}
+
