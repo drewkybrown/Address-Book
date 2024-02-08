@@ -54,10 +54,10 @@ I have developed a fully-featured Django address book application that incorpora
 ## Key Features
 
 ## Full CRUD Functionality
-- Create:** I can add new entries to my address book, capturing essential details like name, email, phone number, address, city, state, and zipcode.
-- Read:** I enable users to browse through all stored contacts in the address book, with options to view detailed information for each contact.
-- Update:** I provide the capability to edit the information of existing contacts, ensuring the address book remains up-to-date.
-- Delete:** I allow users to remove outdated or unnecessary contacts, maintaining the relevance and cleanliness of the database.
+- Create: I can add new entries to my address book, capturing essential details like name, email, phone number, address, city, state, and zipcode.
+- Read: I enable users to browse through all stored contacts in the address book, with options to view detailed information for each contact.
+- Update: I provide the capability to edit the information of existing contacts, ensuring the address book remains up-to-date.
+- Delete: I allow users to remove outdated or unnecessary contacts, maintaining the relevance and cleanliness of the database.
 
 ##Responsive Web Interface
 - My application features a responsive web design, utilizing Django templates potentially enhanced with Bootstrap for styling. This ensures a seamless user experience across different devices and screen sizes.
