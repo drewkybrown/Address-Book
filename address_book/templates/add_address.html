@@ -1,5 +1,41 @@
-{% extends 'base.html'%} {% block content%}
+{% extends 'base.html' %}
 
-<h1>Add Address</h1>
 
-{% endblock %} ```
+{% block content %}
+	<h1>Add Address...</h1>
+<br/>
+	<form method="POST">
+		{% csrf_token %}
+
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Full Name" name="name">
+	  </div>
+      <br/>
+	  <div class="form-group">
+	    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Addres" name="email">
+	  </div>
+	  <br/>
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Phone Number" name="phone">
+	  </div>
+      <br/>
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Address" name="address">
+	  </div>
+      <br/>
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="City" name="city">
+	  </div>
+      <br/>
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="State" name="state">
+	  </div>
+      <br/>
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Zipcode" name="zipcode">
+	  </div>
+<br/>
+	  <button type="submit" class="btn btn-secondary">Add Address</button>
+	</form>
+
+{% endblock %}
