@@ -87,7 +87,14 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 #     }
 # }
 
-DATABASES = {"default": dj_database_url.config(default=os.environ.get("DATABASE_URL"))}
+# Configure the default database to use the DATABASE_URL environment variable,
+# falling back to a different default if DATABASE_URL isn't set.
+DATABASES = {
+    "default": dj_database_url.config(
+        default="postgres://qorswddtwfmrhc:e2748b05b060d95d11554dd985add5751acaf8b09eb6b17123584ba4f123f73f@ec2-54-243-32-226.compute-1.amazonaws.com:5432/d2rr89u6583d0r",
+        conn_max_age=600,  # Use persistent connections; recommended for production.
+    )
+}
 
 
 # Password validation
