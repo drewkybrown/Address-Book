@@ -11,10 +11,16 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 import os
+print(os.getenv("DATABASE_URL"))
 from pathlib import Path
 import django_heroku
 from decouple import config
 import dj_database_url
+
+from dotenv import load_dotenv
+
+load_dotenv()  # Take environment variables from .env.
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -91,8 +97,9 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 # falling back to a different default if DATABASE_URL isn't set.
 DATABASES = {
     "default": dj_database_url.config(
-        default="postgres://qorswddtwfmrhc:e2748b05b060d95d11554dd985add5751acaf8b09eb6b17123584ba4f123f73f@ec2-54-243-32-226.compute-1.amazonaws.com:5432/d2rr89u6583d0r",
+        default=os.getenv("DATABASE_URL"),
         conn_max_age=600,  # Use persistent connections; recommended for production.
+        engine="django.db.backends.postgresql",  # Explicitly set the ENGINE
     )
 }
 
